@@ -1,77 +1,52 @@
-﻿// Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
-
-// Console.Clear();
-
-// Console.WriteLine("Введите 1 число: ");
-// int a = Convert.ToInt32(Console.ReadLine());
-
-// Console.WriteLine("Введите 2 число: ");
-// int b = Convert.ToInt32(Console.ReadLine());
-
-// if (a > b)
-//     Console.WriteLine($"Число {a} большее, а {b} меньшее.");
-// else if (b > a)
-//     Console.WriteLine($"Число {b} большее, а {a} меньшее.");
-// else if (a == b)
-//     Console.WriteLine("Числа равны.");
-
-
-
-
-// Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
-
-// Console.Clear();
-
-// Console.WriteLine("Введите 1 число: ");
-// int a = Convert.ToInt32(Console.ReadLine());
-
-// Console.WriteLine("Введите 2 число: ");
-// int b = Convert.ToInt32(Console.ReadLine());
-
-// Console.WriteLine("Введите 3 число: ");
-// int c = Convert.ToInt32(Console.ReadLine());
-
-// int max = a;
-
-// if (b > max)
-// {
-//     max = b;
-//     Console.WriteLine(max);
-// }
-    
-// else if (c > max)
-// {
-//     max = c;
-//     Console.WriteLine(max);
-// }
-// else 
-//     Console.WriteLine(max);
-
-
-
-// Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+﻿// Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
 
 // Console.Clear();
 
 // Console.WriteLine("Введите число: ");
-// int d = Convert.ToInt32(Console.ReadLine());
+// int n = Convert.ToInt32(Console.ReadLine());
 
-// if (d % 2 == 0)
-//     Console.WriteLine("Число чётное.");
-// else
-//     Console.WriteLine("Число нечётное.");
+// int n1 = (n / 100) * 100;
+// int n2 = (n - (n % 10) - n1) / 10;
 
-// Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
+// Console.WriteLine($"Второе цифра данного числа: {n2}");
+
+// Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
 // Console.Clear();
 
-// int count = 2;
+// Console.WriteLine("Введите число: ");
+// int x = Convert.ToInt32(Console.ReadLine());
 
-// Console.WriteLine("Введите число:");
+// if (x > 1 & x < 6)
+//     Console.WriteLine("Это будний день.");
+// else if (x < 8 & x > 0)
+//     Console.WriteLine("Это выходной.");
+// else 
+//     Console.WriteLine("Такого дня недели нет.");
+
+// Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+
+// Console.Clear();
+
+// Console.WriteLine("Введите число: ");
 // int n = Convert.ToInt32(Console.ReadLine());
+// int n1 = 0;
 
-// while (count <= n)
+// if (n >= 1000)
 // {
-//     Console.Write($"{count} ");
-//     count += 2;
+//     while(n > 1000)
+//     {
+//         n = n / 10;
+//     }
+//     n1 = n % 10;
+//     Console.WriteLine(n1);
+// }
+// else if (n < 100)
+// {
+//     Console.WriteLine("В этом числе нет 3 цифры.");
+// }
+// else if (n > 99 || n < 1000)
+// {
+//     n1 = n % 2;
+//     Console.WriteLine(n1);
 // }
