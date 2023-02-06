@@ -1,52 +1,58 @@
-﻿// Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+﻿// Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 
 // Console.Clear();
 
-// Console.WriteLine("Введите число: ");
+// Console.WriteLine("Введите 5-значное число: ");
 // int n = Convert.ToInt32(Console.ReadLine());
 
-// int n1 = (n / 100) * 100;
-// int n2 = (n - (n % 10) - n1) / 10;
+// while (n > 99999 || n < 10000)
+// {
+//   Console.WriteLine("Вы ошиблись/nВведите 5-значное число: ");
+//   n = Convert.ToInt32(Console.ReadLine());
+// }
 
-// Console.WriteLine($"Второе цифра данного числа: {n2}");
-
-// Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
-
-// Console.Clear();
-
-// Console.WriteLine("Введите число: ");
-// int x = Convert.ToInt32(Console.ReadLine());
-
-// if (x > 1 & x < 6)
-//     Console.WriteLine("Это будний день.");
-// else if (x < 8 & x > 0)
-//     Console.WriteLine("Это выходной.");
+// int n1 = n / 10000;
+// int n2 = n % 10;
+// if (n1 != n2)
+//   Console.WriteLine("Это число не палиндром.");
 // else 
-//     Console.WriteLine("Такого дня недели нет.");
+// {
+//   if (n1 == n2)
+//   {
+//     int n3 = (n / 1000) - n1 * 10;
+//     int n4 = (n / 10) % 10;
+//     if(n3 == n4)
+//       Console.WriteLine("Данное число палиндром.");
+//     else
+//       Console.WriteLine("Это число не палиндром.");
+//   }
+// }
+// Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 
-// Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+// Console.Clear();
+
+// Console.WriteLine("Введите x1, y1, z1: ");
+// double x1 = Convert.ToDouble(Console.ReadLine());
+// double y1 = Convert.ToDouble(Console.ReadLine());
+// double z1 = Convert.ToDouble(Console.ReadLine());
+
+// Console.WriteLine("Введите x2, y2, z2: ");
+// double x2 = Convert.ToDouble(Console.ReadLine());
+// double y2 = Convert.ToDouble(Console.ReadLine());
+// double z2 = Convert.ToDouble(Console.ReadLine());
+
+// double result = Math.Sqrt(Math.Pow(x1 - x2, 2) + Math.Pow(y2 - y1, 2) + Math.Pow(z2 - z1, 2));
+// Console.WriteLine($"Результат: {Math.Round(result, 2)}");
+
+// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
 
 // Console.Clear();
 
 // Console.WriteLine("Введите число: ");
 // int n = Convert.ToInt32(Console.ReadLine());
-// int n1 = 0;
 
-// if (n >= 1000)
+// for (int i = 1; i <= n; i++)
 // {
-//     while(n > 1000)
-//     {
-//         n = n / 10;
-//     }
-//     n1 = n % 10;
-//     Console.WriteLine(n1);
-// }
-// else if (n < 100)
-// {
-//     Console.WriteLine("В этом числе нет 3 цифры.");
-// }
-// else if (n > 99 || n < 1000)
-// {
-//     n1 = n % 2;
-//     Console.WriteLine(n1);
+//     int result = i * i * i;
+//     Console.Write($"{result} ");
 // }
