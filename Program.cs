@@ -1,71 +1,92 @@
-﻿// Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+﻿//Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+
+// void InputArray(int[] array)
+// {
+//   for (int i = 0; i < array.Length; i++)
+//     array[i] = new Random().Next(100, 1000);
+// }
+
+
+// void ReleaseArray(int[] array, int count = 0)
+// {
+//   foreach (int i in array)
+//   {
+//     if (i % 2 == 0)
+//         count += 1;
+//   }
+//   Console.Write(count);
+// }
 
 // Console.Clear();
-
-// Console.Write("Введите первое число: ");
+// Console.Write("Введите кол-во элементов: ");
 // int n = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите второе число: ");
-// int x = Convert.ToInt32(Console.ReadLine());
-// int result = 1;
-// int i = 1;
+// int[] array = new int[n];
+// InputArray(array);
+// Console.WriteLine($"Начальный массив: [{string.Join(", ", array)}]");
+// Console.Write("Количество четных чисел: ");
+// ReleaseArray(array);
 
-// while (i <= x)
+//Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+
+// void InputArray(int[] array)
 // {
-//     result = result * n;
-//     i++;
-// }
-// Console.WriteLine(result);
-
-// Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
-// int number = ReadInt("Введите число: ");
-// int len = NumberLen(number);
-// SumNumbers(number, len);
-
-
-// // Функция ввода
-// int ReadInt(string message)
-// {
-//     Console.Write(message);
-//     return Convert.ToInt32(Console.ReadLine());
+//   for (int i = 0; i < array.Length; i++)
+//     array[i] = new Random().Next(-10, 11);
 // }
 
-// // Функция подсчета цифр в числе
-// int NumberLen(int a)
+// int sum = 0;
+// void ReleaseArray(int[] array, int count = 0)
 // {
-//     int index = 0;
-//     while (a > 0)
-//     {
-//         a /= 10;
-//         index++;
-//     }
-//     return index;
+//   for (int i = 1; i < array.Length; i += 2)
+//   {
+//     sum = sum + array[i];
+//   }
+//   Console.Write(sum);
 // }
-
-// // Функция вывода суммы цифр в числе
-// void SumNumbers(int n, int len)
-// {
-//     int sum = 0;
-//     for (int i = 1; i <= len; i++)
-//     {
-//         sum += n % 10;
-//         n /= 10;
-//     }
-//     Console.WriteLine(sum);
-// }
-// 
 
 // Console.Clear();
-
-// Console.Write("Введите количество учеников: ");
+// Console.Write("Введите кол-во элементов: ");
 // int n = Convert.ToInt32(Console.ReadLine());
+// int[] array = new int[n];
+// InputArray(array);
+// Console.WriteLine($"Начальный массив: [{string.Join(", ", array)}]");
+// Console.Write("Сумма нечётных индексов: ");
+// ReleaseArray(array);
 
-// Console.Write("Введите рост учеников по убыванию: ");
-// int [] array = {100};
-// int i = array.Length;
+// Задайте массив вещественных(дробных) чисел. Найдите разницу между максимальным и минимальным элементов массива.
 
-// while (i <= array.Length)
+// void InputArray(double [] array)
 // {
-//     array[1] = Convert.ToInt32(Console.ReadLine());
-//     i++;
+//   for (int i = 0; i < array.Length; i++)
+//     array[i] = new Random().NextDouble();
+//   for (int i = 0; i < array.Length; i++)
+//   {
+//     array[i] = Math.Round(array[i] * 100, 2);
+//   }
 // }
-// Console.WriteLine(array);
+
+// void ReleaseArray(double[] array)
+// {
+//   double min = array[0];
+//   double max = array[0];
+//   for (int i = 1; i < array.Length; i++)
+//     {
+//       if (array[i] < min)
+//         min = array[i];
+//       if (array[i] > max)
+//          max = array[i];
+//     }
+//   double result = Math.Round(max - min, 2);
+//   Console.Write(result);
+// }
+
+// Console.Clear();
+// Console.Write("Введите кол-во элементов: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// double [] array = new double [n];
+// InputArray(array);
+// double max = array[0];
+// double min = array[0];
+// Console.WriteLine($"Начальный массив: [{string.Join(", ", array)}]");
+// Console.Write("Разница между min и max: ");
+// ReleaseArray(array);
