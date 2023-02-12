@@ -55,38 +55,36 @@
 
 // Задайте массив вещественных(дробных) чисел. Найдите разницу между максимальным и минимальным элементов массива.
 
-// void InputArray(double [] array)
-// {
-//   for (int i = 0; i < array.Length; i++)
-//     array[i] = new Random().NextDouble();
-//   for (int i = 0; i < array.Length; i++)
-//   {
-//     array[i] = Math.Round(array[i] * 100, 2);
-//   }
-// }
+void InputArray(double [] array)
+{
+  for (int i = 0; i < array.Length; i++)
+    array[i] = new Random().NextDouble();
+  for (int i = 0; i < array.Length; i++)
+  {
+    array[i] = Math.Round(array[i] * 100, 2);
+  }
+}
 
-// void ReleaseArray(double[] array)
-// {
-//   double min = array[0];
-//   double max = array[0];
-//   for (int i = 1; i < array.Length; i++)
-//     {
-//       if (array[i] < min)
-//         min = array[i];
-//       if (array[i] > max)
-//          max = array[i];
-//     }
-//   double result = Math.Round(max - min, 2);
-//   Console.Write(result);
-// }
+void ReleaseArray(double[] array)
+{
+  double min = array[0];
+  double max = array[0];
+  for (int i = 1; i < array.Length; i++)
+    {
+      if (array[i] < min)
+        min = array[i];
+      if (array[i] > max)
+         max = array[i];
+    }
+  double result = Math.Round(max - min, 2);
+  Console.Write(result);
+}
 
-// Console.Clear();
-// Console.Write("Введите кол-во элементов: ");
-// int n = Convert.ToInt32(Console.ReadLine());
-// double [] array = new double [n];
-// InputArray(array);
-// double max = array[0];
-// double min = array[0];
-// Console.WriteLine($"Начальный массив: [{string.Join(", ", array)}]");
-// Console.Write("Разница между min и max: ");
-// ReleaseArray(array);
+Console.Clear();
+Console.Write("Введите кол-во элементов: ");
+int n = Convert.ToInt32(Console.ReadLine());
+double [] array = new double [n];
+InputArray(array);
+Console.WriteLine($"Начальный массив: [{string.Join(", ", array)}]");
+Console.Write("Разница между min и max: ");
+ReleaseArray(array);
