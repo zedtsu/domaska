@@ -1,90 +1,51 @@
-﻿//Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+﻿// Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
 
-// void InputArray(int[] array)
+// Console.Write("Введите число: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// int count = 0;
+
+// for (int i = 0; i <= m; i++)
 // {
-//   for (int i = 0; i < array.Length; i++)
-//     array[i] = new Random().Next(100, 1000);
-// }
-
-
-// void ReleaseArray(int[] array, int count = 0)
-// {
-//   foreach (int i in array)
-//   {
-//     if (i % 2 == 0)
+//     if (Convert.ToInt32(Console.ReadLine()) > 0)
 //         count += 1;
-//   }
-//   Console.Write(count);
 // }
+// Console.Write(count);
+
+// Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
 
 // Console.Clear();
-// Console.Write("Введите кол-во элементов: ");
-// int n = Convert.ToInt32(Console.ReadLine());
-// int[] array = new int[n];
-// InputArray(array);
-// Console.WriteLine($"Начальный массив: [{string.Join(", ", array)}]");
-// Console.Write("Количество четных чисел: ");
-// ReleaseArray(array);
 
-//Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+// Console.Write("Введите b1: ");
+// double b1 = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Введите k1: ");
+// double k1 = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Введите b2: ");
+// double b2 = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Введите k2: ");
+// double k2 = Convert.ToDouble(Console.ReadLine());
 
-// void InputArray(int[] array)
-// {
-//   for (int i = 0; i < array.Length; i++)
-//     array[i] = new Random().Next(-10, 11);
-// }
+// double x = (b2 - b1) / (k1 - k2);
+// double y1 = k1 * x + b1;
+// double y2 = k2 * x + b2;
+// Console.WriteLine($"({y1}, {y2})");
 
-// int sum = 0;
-// void ReleaseArray(int[] array, int count = 0)
-// {
-//   for (int i = 1; i < array.Length; i += 2)
-//   {
-//     sum = sum + array[i];
-//   }
-//   Console.Write(sum);
-// }
+// По целочисленным координатам вершин треугольника (x1,y1), (x2,y2) и (x3,y3) требуется вычислить его площадь.
 
 // Console.Clear();
-// Console.Write("Введите кол-во элементов: ");
-// int n = Convert.ToInt32(Console.ReadLine());
-// int[] array = new int[n];
-// InputArray(array);
-// Console.WriteLine($"Начальный массив: [{string.Join(", ", array)}]");
-// Console.Write("Сумма нечётных индексов: ");
-// ReleaseArray(array);
 
-// Задайте массив вещественных(дробных) чисел. Найдите разницу между максимальным и минимальным элементов массива.
+// Console.Write("Введите x1: ");
+// int x1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите y1: ");
+// int y1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите x2: ");
+// int x2 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите y2: ");
+// int y2 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите x3: ");
+// int x3 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите y3: ");
+// int y3 = Convert.ToInt32(Console.ReadLine());
 
-// void InputArray(double [] array)
-// {
-//   for (int i = 0; i < array.Length; i++)
-//     array[i] = new Random().NextDouble();
-//   for (int i = 0; i < array.Length; i++)
-//   {
-//     array[i] = Math.Round(array[i] * 100, 2);
-//   }
-// }
-
-// void ReleaseArray(double[] array)
-// {
-//   double min = array[0];
-//   double max = array[0];
-//   for (int i = 1; i < array.Length; i++)
-//     {
-//       if (array[i] < min)
-//         min = array[i];
-//       if (array[i] > max)
-//          max = array[i];
-//     }
-//   double result = Math.Round(max - min, 2);
-//   Console.Write(result);
-// }
-
-// Console.Clear();
-// Console.Write("Введите кол-во элементов: ");
-// int n = Convert.ToInt32(Console.ReadLine());
-// double [] array = new double [n];
-// InputArray(array);
-// Console.WriteLine($"Начальный массив: [{string.Join(", ", array)}]");
-// Console.Write("Разница между min и max: ");
-// ReleaseArray(array);
+// int p = (x1 + y1) + (x2 + y2) + (x3 + y3) / 2;
+// double S = Convert.ToDouble(Math.Sqrt(p * (p - (x1 + y1)) * p * (p - (x2 + y2)) * p * (p - (x3 + y3))));
+// Console.WriteLine(S);
