@@ -1,51 +1,162 @@
-﻿// Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+﻿// Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
 
-// Console.Write("Введите число: ");
-// int m = Convert.ToInt32(Console.ReadLine());
-// int count = 0;
-
-// for (int i = 0; i <= m; i++)
+// void InputMatrix(double[,] matrix)
 // {
-//     if (Convert.ToInt32(Console.ReadLine()) > 0)
-//         count += 1;
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//             matrix[i, j] = Math.Round((new Random().NextDouble()) * 100, 2);
+//     }
 // }
-// Console.Write(count);
 
-// Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
-
-// Console.Clear();
-
-// Console.Write("Введите b1: ");
-// double b1 = Convert.ToDouble(Console.ReadLine());
-// Console.Write("Введите k1: ");
-// double k1 = Convert.ToDouble(Console.ReadLine());
-// Console.Write("Введите b2: ");
-// double b2 = Convert.ToDouble(Console.ReadLine());
-// Console.Write("Введите k2: ");
-// double k2 = Convert.ToDouble(Console.ReadLine());
-
-// double x = (b2 - b1) / (k1 - k2);
-// double y1 = k1 * x + b1;
-// double y2 = k2 * x + b2;
-// Console.WriteLine($"({y1}, {y2})");
-
-// По целочисленным координатам вершин треугольника (x1,y1), (x2,y2) и (x3,y3) требуется вычислить его площадь.
+// void PrintMatrix(double[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//             Console.Write($"{matrix[i, j]} \t");
+//         Console.WriteLine();
+//     }
+// }
 
 // Console.Clear();
+// Console.Write("Введите размер массива: ");
+// int[] size = Console.ReadLine().Split().Select(x => int.Parse(x)).ToArray();
+// double[,] matrix = new double[size[0], size[1]];
+// Console.WriteLine("Начальный массив:");
+// InputMatrix(matrix);
+// PrintMatrix(matrix);
 
-// Console.Write("Введите x1: ");
-// int x1 = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите y1: ");
-// int y1 = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите x2: ");
-// int x2 = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите y2: ");
-// int y2 = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите x3: ");
-// int x3 = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите y3: ");
-// int y3 = Convert.ToInt32(Console.ReadLine());
+// Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
 
-// int p = (x1 + y1) + (x2 + y2) + (x3 + y3) / 2;
-// double S = Convert.ToDouble(Math.Sqrt(p * (p - (x1 + y1)) * p * (p - (x2 + y2)) * p * (p - (x3 + y3))));
-// Console.WriteLine(S);
+// void InputMatrix(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//             matrix[i, j] = new Random().Next(1, 21);
+//     }
+// }
+
+// void PrintMatrix(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//             Console.Write($"{matrix[i, j]} \t");
+//         Console.WriteLine();
+//     }
+// }
+
+// Console.Clear();
+// Console.Write("Введите размер массива: ");
+// int[] size = Console.ReadLine().Split().Select(x => int.Parse(x)).ToArray();
+// int[,] matrix = new int[size[0], size[1]];
+// Console.WriteLine("Начальный массив:");
+// InputMatrix(matrix);
+// PrintMatrix(matrix);
+// Console.Write("Введите номер столбца: ");
+// int n1 = (Convert.ToInt32(Console.ReadLine())) + 0;
+// Console.Write("Введите номер строки: ");
+// int n = (Convert.ToInt32(Console.ReadLine())) + 0;
+// int nomer = 21;
+// for (int i = 0; i < matrix.GetLength(0); i++)
+// {
+//     for (int j = 0; j < matrix.GetLength(1); j++)
+//         if (i + 1 == n && j + 1 == n1)
+//         {
+//             nomer = matrix[i, j];
+//         }     
+// }
+// if (nomer != 21)
+//     Console.WriteLine($"Результат: {nomer}");
+// else
+//     Console.WriteLine("Такой позиции в массиве нет.");
+
+// Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+
+// void InputMatrix(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//             matrix[i, j] = new Random().Next(1, 21);
+//     }
+// }
+
+// void PrintMatrix(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//             Console.Write($"{matrix[i, j]} \t");
+//         Console.WriteLine();
+//     }
+// }
+
+// double sum = 0;
+// double result = 0;
+// void Check(int[,] matrix)
+// {
+//     for (int j = 0; j < matrix.GetLength(1); j++)
+//     {
+//     double sum = 0;
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         sum += matrix[i, j];
+//     }
+//     Console.Write($"{ sum / matrix.GetLength(0)} ");
+//     }       
+// }
+// Console.Clear();
+// Console.Write("Введите размер массива: ");
+// int[] size = Console.ReadLine().Split().Select(x => int.Parse(x)).ToArray();
+// int[,] matrix = new int[size[0], size[1]];
+// Console.WriteLine("Начальный массив:");
+// InputMatrix(matrix);
+// PrintMatrix(matrix);
+// Check(matrix);
+
+// Доп.
+
+// void InputMatrix(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//             matrix[i, j] = new Random().Next(1, 21);
+//     }
+// }
+
+// void PrintMatrix(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//             Console.Write($"{matrix[i, j]} \t");
+//         Console.WriteLine();
+//     }
+// }
+
+// void Tr(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             matrix[i, j] = matrix[matrix.GetLength(0) - 1 - i, matrix.GetLength(1) - 1 - j];
+//             Console.Write($"{matrix[i, j]} \t");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+// Console.Clear();
+// Console.Write("Введите размер массива: ");
+// int[] size = Console.ReadLine().Split().Select(x => int.Parse(x)).ToArray();
+// int[,] matrix = new int[size[0], size[1]];
+// Console.WriteLine("Начальный массив:");
+// InputMatrix(matrix);
+// PrintMatrix(matrix);
+// Console.WriteLine();
+// Tr(matrix);
